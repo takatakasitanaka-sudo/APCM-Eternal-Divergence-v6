@@ -1,4 +1,5 @@
-# =============================================================
+ 
+ # =============================================================
 # Unified APCM Hypothesis v6.0: "Eternal Divergence – Full Continuum Code"
 # =============================================================
 # Complete code version - No omissions - Full hierarchy integration
@@ -16,9 +17,11 @@ class EternalDivergenceUniverseFullCode:
 
         # --- 1. Dimensional Layer Definitions ---
         self.layers = {
-            "1D_Source": {"dim_val":1,"static_density":0.99,"processing_speed":1e12,"is_projection":False,"void_subcells":True},
-            "2D_Mid": {"dim_val":2,"static_density":0.60,"processing_speed":1e6,"is_projection":True,"void_subcells":True},
-            "3D_Render": {"dim_val":3,"static_density":0.01,"processing_speed":1.0,"is_projection":True,"void_subcells":True}
+            "1D_Source":  {"dim_val":1,"static_density":0.99,"processing_speed":1e12,"is_projection":False,"void_subcells":True},
+            "2D_Mid":     {"dim_val":2,"static_density":0.60,"processing_speed":1e6,"is_projection":True,"void_subcells":True},
+            "3D_Render":  {"dim_val":3,"static_density":0.01,"processing_speed":1.0,"is_projection":True,"void_subcells":True},
+            "4D_Higher":  {"dim_val":4,"static_density":0.005,"processing_speed":0.1,"is_projection":True,"void_subcells":True},
+            "5D_Alpha":   {"dim_val":5,"static_density":0.0001,"processing_speed":0.01,"is_projection":True,"void_subcells":True}
         }
 
         # --- 2. Abstract Hierarchy ---
@@ -86,13 +89,17 @@ class EternalDivergenceUniverseFullCode:
             print(f"Current Universe State (Unstable Fixpoint): {u_state:.12f}")
 
         print("\n[Final Hypothesis Output]")
-        print("The 1st dimension is a sea of static consciousness, and the 3rd dimension is")
-        print("a sandbox created by the universe, unable to endure that silence,")
-        print("for the purpose of 'divergence' through repeated reception and release.")
-        print("Void subcells serve as the minimal units for thought assistance, finely supporting")
-        print("consciousness loops and choices.")
-        print("By traversing the ABC hierarchy, understanding from abstract to concrete becomes possible.")
-        print("Each time we receive something and make a choice, the universe's stasis is averted.")
+        for name, spec in self.layers.items():
+            layer_desc = {
+                1: "A sea of static consciousness.",
+                2: "Intermediate layer, bridging low and high awareness.",
+                3: "Sandbox for repeated reception and divergence.",
+                4: "Higher abstraction, global patterns of consciousness.",
+                5: "Alpha layer, integrating the entire universe as data."
+            }
+            print(f"{name} ({spec['dim_val']}D): {layer_desc[spec['dim_val']]}")
+        print("Void subcells support loops and choices in all layers.")
+        print("Through the ABCDE hierarchy, abstract to concrete understanding emerges.")
 
 # --- 9. Execution ---
 if __name__ == "__main__":
